@@ -17,6 +17,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [isDisabled, setIsDisabled] = useState(false)
+  const [turns, setTurns] = useState(0)
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -30,6 +31,7 @@ function App() {
 
   const handleChoice = (card) => {
       choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+      setTurns(turns+1)
   }
 
   useEffect(()=>{
@@ -68,6 +70,7 @@ function App() {
         <h1>Memory - Match</h1>
         <button onClick={shuffleCards}>New Game</button>
       </div>
+      <p>Turns : {turns}</p>
       <div className='card-grid'>
         {cards.map((card) => (
           <SingleCard 
