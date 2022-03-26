@@ -1,4 +1,5 @@
 # Memory Match
+This is a simple memory game.
 
 # Clone
 git clone https://github.com/josephajith1212/memory-match.git
