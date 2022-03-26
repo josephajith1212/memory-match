@@ -70,7 +70,7 @@ function App() {
         <h1>Memory - Match</h1>
         <button onClick={shuffleCards}>New Game</button>
       </div>
-      <p>Turns : {turns}</p>
+      <p><b>Turns : {turns}</b></p>
       <div className='card-grid'>
         {cards.map((card) => (
           <SingleCard 
