@@ -14,6 +14,7 @@ const cardImages = [
 
 function App() {
   const [cards, setCards] = useState([])
+  const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [isDisabled, setIsDisabled] = useState(false)
@@ -25,6 +26,7 @@ function App() {
       .map((card) => ({...card, id: Math.random()}))
 
     setCards(shuffledCards)
+    setTurns(0)
     setChoiceOne(null)
     setChoiceTwo(null)
   }
@@ -61,6 +63,7 @@ function App() {
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
+    setTurns(prevTurns => prevTurns ++)
     setIsDisabled(false)
   }
 

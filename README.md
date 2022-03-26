@@ -1,5 +1,4 @@
 # Memory Match
-This is a Memory game with theme of The Office (TV series). 
 
 # Clone
 git clone https://github.com/josephajith1212/memory-match.git
